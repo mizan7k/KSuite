@@ -35,10 +35,13 @@ jobs:
 
     - name: Create Environment File
       run: |
-        if [ -f .env.example ]; then
+        if [ ! -f .env.example ]; then
+          echo "Creating dummy .env.example because it was not found..."
+          touch .env.example
+        fi
+        if [ ! -f .env ]; then
+          echo "Creating .env..."
           cp .env.example .env
-        else
-          touch .env
         fi
 
     - name: Set up Keystore
