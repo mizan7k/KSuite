@@ -28,6 +28,14 @@ jobs:
     - name: Grant Execute Permission for Gradlew
       run: chmod +x gradlew
 
+    - name: Create Environment File
+      run: |
+        if [ -f .env.example ]; then
+          cp .env.example .env
+        else
+          touch .env
+        fi
+
     - name: Decode Keystore
       run: |
         if [ -f debug.keystore.base64 ]; then
