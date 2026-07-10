@@ -1,0 +1,6 @@
+{
+  "name": "KSuite",
+  "description": "Premium multi-calculator and math utility suite with 30+ custom calculators, scientific formula engines, matrix solvers, and history tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
